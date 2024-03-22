@@ -1,0 +1,265 @@
+@font-face {
+    font-family: 'Bai Jamjuree';
+    src: url(images/BaiJamjuree-Regular.ttf) format('truetype');
+}
+:root {
+    /* ### Primary */
+    --Strong-Cyan: hsl(171, 66%, 44%);
+    --Light-Blue: hsl(233, 100%, 69%);
+    
+    /* ### Neutral */
+    --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+    --Grayish-Blue: hsl(201, 11%, 66%);
+
+    /* font family */
+    --ff-bai: 'Bai Jamjuree';
+    /* font-weight */
+    --fw-400: 400;
+    --fw-600: 600;
+    
+    /* font size */
+    --fs-180: 18px;
+
+}
+.ff-bai {
+    font-family: var(--ff-bai);
+}
+.fw-400 {
+    font-weight: var(--fw-400);
+}
+.fw-600 {
+    font-weight: var(--fw-600);
+}
+.fs-180 {
+    font-size: var(--fs-180);
+}
+.capitalize {
+    text-transform: capitalize;
+}
+.bg-footer {
+    background: var(--Grayish-Blue);
+}
+.text-color {
+    color: var(--Grayish-Blue);
+}
+.text-dark {
+    color: var(--Dark-Grayish-Blue);
+}
+.text-white {
+    color: #fff;
+}
+.button-blue {
+    background: var(--Light-Blue);
+}
+.button-cyan {
+    background: var(--Strong-Cyan);
+}
+.flex {
+    display: flex;
+    gap: 1rem;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+}
+body, h1, h2, h3, h4, h5, p {
+    margin: 0;
+}
+h1, h2, h3, h4, h5, p {
+    font-weight: var(--fw-400);
+}
+button,
+textarea,
+input {
+    font: inherit;
+}
+h1, h2, h3, h4, h5 {
+    color: var(--Dark-Grayish-Blue);
+    font-weight: var(--fw-600);
+}
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 375px;
+}
+.main-container {
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.logo-container {
+    background: url('images/bg-header-mobile.png') center/cover no-repeat;
+    align-items: center;
+    justify-content: center;
+}
+.logo-container > img {
+    padding: 6.3rem 8rem;
+}
+.logo-info {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 3rem;
+}
+.logo-info > .buttons {
+    flex-direction: column;
+}
+.ios, .mac {
+    border: 0;
+    color: #fff;
+    padding: 1rem 2rem;
+    width: 100%;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.ios:hover, .mac:hover {
+    opacity: .8;
+}
+.track-snippets {
+    margin: 8rem 0;
+    text-align: center;
+    flex-direction: column;
+    gap: 6rem;
+}
+.search-sync, .snippets, .computer {
+    flex-direction: column;   
+}
+.computer {
+    gap: 3rem;
+}
+.search, .sync, .history {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.clipboard {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+    margin: 5rem 0;
+}
+.access {
+    flex-direction: column;
+    gap: 1rem;
+}
+.workflow, .blacklist, .plain-text, .sneak {
+    flex-direction: column;
+    gap: .5rem;
+    padding: 0 3.55rem;
+    align-items: center;
+}
+.icons, .icons-one, .icons-two, .supercharge {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+.supercharge {
+    gap: 5rem;
+}
+.icons-one, .icons-two {
+    gap: 3rem;
+}
+.blacklist > img, .plain-text > img, .sneak > img {
+    padding: 0 0 2rem 0;
+}
+.icons {
+    gap: 9rem;
+}
+.clip {
+    flex-direction: column;
+    margin: 10rem 0;
+    text-align: center;
+    padding: 0 1.8rem;
+}
+.buttons {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+footer, .links, .privacy, .install, .contact {
+    flex-direction: column;
+    text-align: center;
+}
+ul {
+    list-style: none;
+}
+li, a {
+    text-decoration: none;
+    color: var(--Dark-Grayish-Blue);
+    width: 100%;
+}
+footer {
+    align-items: center;
+    justify-content: center;
+    padding: 10% 100%;
+}
+.social-media {
+    align-items: center;
+    justify-content: center;
+}
+.social-media > img {
+    cursor: pointer;
+}
+
+@media (min-width: 40rem) {
+    .logo-container {
+        background: url('images/bg-header-desktop.png') center/cover no-repeat;
+        align-items: center;
+        justify-content: center;
+        width: 250vh;
+        height: 65vh;
+    }   
+    .container {
+        width: 90%;
+        max-width: 700px;
+    }
+    .main-container {
+        width: 100%;
+        max-width: 700px;
+    }
+    .logo-info > .buttons, .buttons {
+        flex-direction: row;
+    }
+    .computer {
+        flex-direction: row;
+        width: 150%;
+        text-align: left;
+        padding-left: 0;
+        margin-left: -21rem;
+    }
+    .computer > img {
+        width: 60%;
+    }
+    .search-sync {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+    }
+    .icons-one, .icons-two{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .blacklist, .plain-text, .sneak {
+        padding: 0;
+        margin: 0;
+    }
+    .blacklist > p, .plain-text > p, .sneak > p {
+    }
+}
